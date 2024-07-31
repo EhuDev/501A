@@ -1,0 +1,127 @@
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  border: 1px solid black;
+}
+
+#officers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid black;
+}
+.officers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  border: 1px solid black;
+  padding: 0;
+}
+
+.card {
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  background-color: #f5f5f5;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+}
+.team {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: #f5f5f5;
+  border: 1px solid black;
+}
+#schedule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  height: 100%;
+  background-color: #f5f5f5;
+  border: 1px solid green;
+}
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  border: 1px solid red;
+  padding: 0;
+}
+
+.schedule-sub-container {
+  max-width: 1200px;
+  height: 100%;
+  display: inline-block;
+  background-color: #f5f5f5;
+  border: 1px solid blue;
+  margin-bottom: 50px;
+}
+
+.schedule-card {
+  width: 400px;
+  height: 215px;
+  display: inline-block;
+  background-color: #f5f5f5;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.sub-card {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+.subject {
+  padding: 10px;
+  height: 100px;
+}
+.subject h3 {
+  font-weight: semi-bold;
+  margin: 6px 0;
+}
+.prof {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.prof-button {
+  background-color: #f5f5f5;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px;
+  margin: 5px;
+}
