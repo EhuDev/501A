@@ -1,3 +1,4 @@
+import Footer from "./partials/Footer";
 import Navbar from "./partials/Navbar";
 
 const Layout = ({ children }) => {
@@ -5,7 +6,7 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       <div>{children}</div>
-      <div></div>
+      <Footer />
     </>
   );
 };

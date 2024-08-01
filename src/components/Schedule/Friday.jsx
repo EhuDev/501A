@@ -48,7 +48,7 @@ const Friday = () => {
                 CODE: <b>ITP311L</b>
               </span>
               <h3>Networking 2 Laboratory</h3>
-              <span>M 05:30 PM - 08:30 PM</span>
+              <span>F 05:30 PM - 08:30 PM</span>
             </div>
             <div>
               <img src="https://via.placeholder.com/150" alt="" />

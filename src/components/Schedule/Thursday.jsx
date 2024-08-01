@@ -13,7 +13,7 @@ const Thursday = () => {
               <span>H 06:00 PM - 09:00 PM</span>
             </div>
             <div>
-              <img src="https://via.placeholder.com/150" alt="" />
+              <img src="https://via.placeholder.com/150" alt="picture" />
             </div>
           </div>
           <div className="prof">
