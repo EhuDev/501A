@@ -4,7 +4,7 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      colors: { white: "#FCFCFC" },
+      colors: { white: "#FCFCFC", skin: "#1D232A" },
       animation: {
         "slow-spin": "spin 10s linear infinite", // Adjust the duration here
       },
@@ -16,5 +16,5 @@ export default {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("tailwind-scrollbar")],
 };
