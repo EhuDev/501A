@@ -1,5 +1,6 @@
-import Schedule from "../Schedule/Schedule";
-import "./HomePage.css";
+import Schedule from "./Schedule";
+import centerLogo from "../assets/RTU-Logo-center.png";
+import frameLogo from "../assets/RTU-Logo-Frame.png";
 
 const HomePage = ({ darkMode }) => {
   return (
@@ -52,24 +53,24 @@ const HomePage = ({ darkMode }) => {
         <div className="absolute top-0 left-0 w-full h-full flex justify-center overflow-hidden  opacity-20">
           <div className="relative w-96 h-96 ml-[-250px] mt-20 lg:mr-60 ">
             <img
-              src="src/assets/RTU-Logo-Frame.png"
+              src={frameLogo}
               alt="Frame Logo"
               className="absolute inset-0 w-full h-full object-cover animate-slow-spin"
             />
             <img
-              src="src/assets/RTU-Logo-center.png"
+              src={centerLogo}
               alt="Center Logo"
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
           <div className="relative w-96 h-96 mr-[-250px] mt-96 lg:mt-20 lg:ml-60 ">
             <img
-              src="src/assets/RTU-Logo-Frame.png"
+              src={frameLogo}
               alt="Frame Logo"
               className="absolute inset-0 w-full h-full object-cover animate-slow-spin"
             />
             <img
-              src="src/assets/RTU-Logo-center.png"
+              src={centerLogo}
               alt="Center Logo"
               className="absolute inset-0 w-full h-full object-cover"
             />
