@@ -1,4 +1,7 @@
+import Logo from "./assets/LOGO.png"
+
 const Navbar = ({ darkMode, toggleDarkMode }) => {
+  
   return (
     <div className="sticky top-0 w-full select-none z-50">
       <div
@@ -83,8 +86,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </div>
           <div className="p-0">
             <img
-              src="/src/assets/LOGO.png"
-              alt=""
+              src={Logo}
+              alt="logo"
               className={`lg:hidden w-14 h-14 drop-shadow-2xl rounded-full flex flex-row-reverse ${
                 darkMode ? "" : ""
               }`}
