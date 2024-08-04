@@ -1,4 +1,5 @@
 import Logo from "./assets/LOGO.png";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   return (
@@ -42,7 +43,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-yellow-500 text-xl font-bold">
+          <a className="btn btn-ghost text-yellow-500 text-xl font-bold ml-[-20px] lg:ml-2">
             ICS-501A
           </a>
         </div>

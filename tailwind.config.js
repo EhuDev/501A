@@ -4,6 +4,12 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        heading: ["Tektur", "serif"], // Example of a custom font family
+      },
+      fontWeight: {
+        semibold: 900, // Define semi-bold weight
+      },
       colors: { white: "#FCFCFC", skin: "#1D232A" },
       animation: {
         "slow-spin": "spin 10s linear infinite",

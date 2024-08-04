@@ -44,40 +44,41 @@ const HomePage = ({ darkMode }) => {
         <div className="relative  mt-44 lg:mt-20 select-none ">
           <div className="">
             <h1
-              className={`text-6xl text-center lg:text-9xl font-extrabold text-[#601008] ${
+              className={`text-6xl text-center lg:text-9xl font-sans font-extrabold  text-[#601008] ${
                 darkMode ? "" : "text-[#bb4136]"
               }`}
             >
               WELCOME
             </h1>
             <h1
-              className={`text-2xl ml-6  lg:text-3xl lg:ml-0 font-extrabold text-blue-900 ${
-                darkMode ? "" : "text-cyan-600"
+              className={`text-2xl ml-4 lg:text-3xl lg:ml-0 font-extrabold text-skin  ${
+                darkMode ? "" : "text-slate-50"
               } `}
             >
-              Students of
+              TO SECTION <span className="text-yellow-500">501-A</span>
             </h1>
-            <div className="flex row items-center content-center">
-              <h1
-                className={`text-6xl lg:text-9xl ml-1 font-extrabold italic pl-2 text-skin ${
-                  darkMode ? "" : "text-white"
-                }`}
-              >
-                ICS
+            <div className="flex row items-center content-center ">
+              <h1 className="text-6xl lg:text-9xl  font-extrabold italic pl-2 text-blue-800 ">
+                RTU
               </h1>
-              <span className="text-lg lg:text-4xl font-extrabold ml-4 text-yellow-500 drop-shadow-lg">
-                Institute of <br />
-                &nbsp; Computer Studies
+              <span className="text-md lg:text-4xl font-extrabold ml-4  drop-shadow-lg">
+                <span
+                  className={`text-blue-950 ${darkMode ? "" : "text-slate-50"}`}
+                >
+                  Institute of
+                </span>
+                <br />
+                &nbsp; <span className="text-yellow-500">Computer Studies</span>
               </span>
             </div>
           </div>
         </div>
       </div>
 
-      <div id="officers"></div>
-      <div id="schedule">
+      <section id="officers "></section>
+      <section id="schedule" className="">
         <Schedule />
-      </div>
+      </section>
     </div>
   );
 };
