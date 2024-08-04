@@ -1,12 +1,12 @@
-import Logo from "./assets/LOGO.png"
+import Logo from "./assets/LOGO.png";
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
-  
   return (
     <div className="sticky top-0 w-full select-none z-50">
+      {/* baguhin yong kulay ng nag navbar */}
       <div
-        className={`navbar bg-skin text-stone-300 font-medium drop-shadow-lg py-1 font-sans ${
-          darkMode ? "bg-white lg:text-skin" : ""
+        className={`navbar  bg-skin text-stone-300 font-medium drop-shadow-lg py-1 font-sans ${
+          darkMode ? " bg-white lg:text-skin" : " "
         } transition-colors duration-300 ease-in-out`}
       >
         <div className="navbar-start ml-[-5px]">
@@ -84,11 +84,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               )}
             </button>
           </div>
-          <div className="p-0">
+          <div className="p-0 ">
             <img
               src={Logo}
               alt="logo"
-              className={`lg:hidden w-14 h-14 drop-shadow-2xl rounded-full flex flex-row-reverse ${
+              className={`lg:hidden w-14 h-14  rounded-full flex flex-row-reverse drop-shadow-white ${
                 darkMode ? "" : ""
               }`}
             />

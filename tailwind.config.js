@@ -6,7 +6,15 @@ export default {
     extend: {
       colors: { white: "#FCFCFC", skin: "#1D232A" },
       animation: {
-        "slow-spin": "spin 10s linear infinite", // Adjust the duration here
+        "slow-spin": "spin 10s linear infinite",
+      },
+      dropShadow: {
+        yellow: "0 0 1px rgba(255, 255, 0, 1)",
+        white: "0 0 1px rgba(255, 255, 255, 1)",
+        "yellow-md": "0 6px 6px rgba(255, 255, 0, 0.5)",
+        "yellow-lg": "0 10px 8px rgba(255, 255, 0, 0.7)",
+        "white-md": "0 4px 4px rgba(255, 255, 255, 1)",
+        "white-lg": "0 0 20px rgba(255, 255, 255, 1)",
       },
       keyframes: {
         spin: {
