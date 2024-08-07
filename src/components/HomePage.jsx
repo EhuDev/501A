@@ -77,7 +77,7 @@ const HomePage = ({ darkMode }) => {
 
       <section id="officers "></section>
       <section id="schedule" className="">
-        <Schedule />
+        <Schedule darkMode={darkMode} />
       </section>
     </div>
   );

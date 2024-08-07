@@ -4,6 +4,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      transitionTimingFunction: {
+        "slow-down": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+      },
       fontFamily: {
         heading: ["Tektur", "serif"], // Example of a custom font family
       },
