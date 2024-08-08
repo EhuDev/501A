@@ -1,27 +1,38 @@
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Friday from "./Friday";
-
 import Monday from "./Monday";
 import Saturday from "./Saturday";
 import Thursday from "./Thursday";
 import Tuesday from "./Tuesday";
 
 const Schedule = ({ darkMode }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: false,
+    });
+  }, []);
   return (
     <div
-      className={`bg-skin w-full h-screen border-2 border-red-600 ${
+      className={`bg-skin w-full h-full border-2 border-red-600 ${
         darkMode ? "bg-white" : ""
       } transition-colors duration-300 ease-in-out flex flex-col items-center`}
     >
       <div>
-        <p className="text-center border-2 mt-20 p-2 text-4xl font-heading font-bold bg-gradient-to-t from-yellow-300 to-yellow-600 bg-clip-text text-transparent">
+        <p
+          className="text-center  mt-5 p-2 lg:text-6xl text-4xl font-heading font-extrabold bg-gradient-to-t from-yellow-300 to-yellow-600 bg-clip-text text-transparent filter-none "
+          data-aos="fade-up"
+        >
           CLASS SCHEDULE
         </p>
         <div className="schedule-container">
           <Monday darkMode={darkMode} />
-          {/* <Tuesday />
-        <Thursday />
-        <Friday />
-        <Saturday /> */}
+          <Tuesday darkMode={darkMode} />
+          <Thursday darkMode={darkMode} />
+          <Friday darkMode={darkMode} />
+          <Saturday darkMode={darkMode} />
         </div>
       </div>
     </div>

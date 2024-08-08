@@ -8,10 +8,11 @@ export default {
         "slow-down": "cubic-bezier(0.25, 0.1, 0.25, 1)",
       },
       fontFamily: {
-        heading: ["Tektur", "serif"], // Example of a custom font family
+        heading: ["Tektur", "serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       fontWeight: {
-        semibold: 900, // Define semi-bold weight
+        semibold: 900,
       },
       colors: { white: "#FCFCFC", skin: "#1D232A" },
       animation: {

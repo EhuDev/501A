@@ -1,17 +1,28 @@
 import Logo from "./assets/LOGO.png";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Link, Element, animateScroll as scroll } from "react-scroll";
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duration of the animation
+      once: false, // Whether animation should happen only once
+    });
+  }, []);
   return (
-    <div className="sticky top-0 w-full select-none z-50">
-      {/* baguhin yong kulay ng nag navbar */}
+    <div className="sticky top-0 w-full select-none z-50 ">
       <div
-        className={`navbar  bg-skin text-stone-300 font-medium drop-shadow-lg py-1 font-sans ${
+        className={`navbar  bg-skin text-stone-300 font-medium shadow-lg py-1 font-sans ${
           darkMode ? " bg-white lg:text-skin" : " "
-        } transition-colors duration-300 ease-in-out`}
+        } transition-colors duration-300 ease-in-out filter-none `}
       >
-        <div className="navbar-start ml-[-5px]">
-          <div className="dropdown">
+        <div
+          className="navbar-start ml-[-5px] filter-none "
+          data-aos="fade-down"
+        >
+          <div className="dropdown filter-none ">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,37 +41,61 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white filter-none"
             >
               <li>
-                <a href="#">Home</a>
+                <Link to="home" smooth={true} duration={500} offset={-70}>
+                  Home
+                </Link>
               </li>
               <li>
-                <a href="#officers">Officers</a>
+                <Link to="officers" smooth={true} duration={500} offset={-70}>
+                  Officers
+                </Link>
               </li>
               <li>
-                <a href="#schedule">Schedule</a>
+                <Link to="schedule" smooth={true} duration={500} offset={-70}>
+                  Schedule
+                </Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-yellow-500 text-xl font-bold ml-[-20px] lg:ml-2">
+          <Link
+            className="btn btn-ghost text-yellow-500 text-xl font-bold ml-[-20px] lg:ml-2"
+            to="home"
+            smooth={true}
+            duration={500}
+            offset={-70}
+          >
             ICS-501A
-          </a>
+          </Link>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div
+          className="navbar-end hidden lg:flex filter-none "
+          data-aos="fade-down"
+        >
           <ul className="flex space-x-7 px-1 text-xl">
-            <li className="hover:text-yellow-500">
-              <a href="#">Home</a>
+            <li className="hover:text-yellow-500 cursor-pointer">
+              <Link to="home" smooth={true} duration={500} offset={-70}>
+                Home
+              </Link>
             </li>
-            <li className="hover:text-yellow-500">
-              <a href="#officers">Officers</a>
+            <li className="hover:text-yellow-500 cursor-pointer">
+              <Link to="officers" smooth={true} duration={500} offset={-70}>
+                Officers
+              </Link>
             </li>
-            <li className="hover:text-yellow-500">
-              <a href="#schedule">Schedule</a>
+            <li className="hover:text-yellow-500 cursor-pointer">
+              <Link to="schedule" smooth={true} duration={500} offset={-70}>
+                Schedule
+              </Link>
             </li>
           </ul>
         </div>
-        <div className="navbar-end lg:max-w-14">
+        <div
+          className="navbar-end lg:max-w-14 filter-none "
+          data-aos="fade-down"
+        >
           <div className="flex content-center items-center">
             <button
               onClick={toggleDarkMode}
@@ -86,13 +121,15 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </button>
           </div>
           <div className="p-0 ">
-            <img
-              src={Logo}
-              alt="logo"
-              className={`lg:hidden w-14 h-14  rounded-full flex flex-row-reverse drop-shadow-white ${
-                darkMode ? "" : ""
-              }`}
-            />
+            <Link to="home" smooth={true} duration={600} offset={-70}>
+              <img
+                src={Logo}
+                alt="logo"
+                className={`lg:hidden w-14 h-14  rounded-full flex flex-row-reverse drop-shadow-white ${
+                  darkMode ? "" : ""
+                }`}
+              />
+            </Link>
           </div>
         </div>
       </div>
