@@ -3,17 +3,11 @@ import centerLogo from "../assets/RTU-Logo-center.png";
 import frameLogo from "../assets/RTU-Logo-Frame.png";
 import iscframe from "../assets/ICS-Logo-frame.png";
 import isccenter from "../assets//ICS-Logo-center.png";
-import React, { useEffect } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 const HomePage = ({ darkMode }) => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Duration of the animation
-      once: false, // Whether animation should happen only once
-    });
-  }, []);
+  //
+
   return (
     <>
       <div name="home" className="h-full ">
@@ -40,7 +34,7 @@ const HomePage = ({ darkMode }) => {
               />
             </div>
             <div
-              className="relative w-72 h-72 lg:w-96 lg:h-96 mr-[-250px] mt-72 lg:mt-20 lg:ml-60 drop-shadow-white filter-none"
+              className="relative w-72 h-72 lg:w-96 lg:h-96 mr-[-250px] mt-72 lg:mt-20 lg:ml-60 drop-shadow-white "
               data-aos="fade-left"
             >
               <img
@@ -57,7 +51,10 @@ const HomePage = ({ darkMode }) => {
           </div>
 
           {/* Main Content */}
-          <div className="relative  mt-44 lg:mt-20 select-none ">
+          <div
+            className="relative  mt-44 lg:mt-20 select-none  "
+            data-aos="zoom-in"
+          >
             <div className="">
               <h1
                 className={`text-6xl text-center lg:text-9xl font-sans font-extrabold  text-[#601008] ${
@@ -67,27 +64,38 @@ const HomePage = ({ darkMode }) => {
                 WELCOME
               </h1>
               <h1
-                className={`text-2xl ml-4 lg:text-3xl lg:ml-0 font-extrabold text-skin  ${
+                className={`text-lg text-center lg:text-3xl font-heading font-extrabold text-skin  ${
                   darkMode ? "" : "text-slate-50"
                 } `}
               >
-                TO SECTION <span className="text-yellow-500">501-A</span>
+                STUDENTS OF
               </h1>
-              <div className="flex row items-center content-center ">
-                <h1 className="text-6xl lg:text-9xl  font-extrabold italic pl-2 text-blue-800 ">
-                  RTU
+              <div className=" ">
+                <h1 className="text-4xl lg:text-8xl  text-center font-extrabold italic  text-yellow-500 ">
+                  ICS-501A
                 </h1>
-                <span className="text-md lg:text-4xl font-extrabold ml-4  drop-shadow-lg">
+              </div>
+              <div className="text-center ">
+                <span className="text-2xl lg:text-5xl font-extrabold ml-4  drop-shadow-lg">
                   <span
-                    className={`text-blue-950 ${
+                    className={`text-blue-950 font-heading ${
                       darkMode ? "" : "text-slate-50"
                     }`}
                   >
-                    Institute of
+                    {"{"} Code, &nbsp;
                   </span>
-                  <br />
-                  &nbsp;
-                  <span className="text-yellow-500">Computer Studies</span>
+
+                  <span
+                    className={`text-[#601008]  font-heading  ${
+                      darkMode ? "" : "text-[#bb4136]"
+                    }`}
+                  >
+                    Debug, &nbsp;
+                  </span>
+
+                  <span className="text-blue-800  font-heading ">
+                    Succeed {"}"}
+                  </span>
                 </span>
               </div>
             </div>

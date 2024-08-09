@@ -8,11 +8,12 @@ const Layout = ({ children }) => {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
+
   return (
     <>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <div> {React.cloneElement(children, { darkMode })}</div>
-      <Footer />
+      <Footer darkMode={darkMode} />
     </>
   );
 };

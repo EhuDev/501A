@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import Friday from "./Friday";
 import Monday from "./Monday";
@@ -8,15 +6,9 @@ import Thursday from "./Thursday";
 import Tuesday from "./Tuesday";
 
 const Schedule = ({ darkMode }) => {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-      once: false,
-    });
-  }, []);
   return (
     <div
-      className={`bg-skin w-full h-full border-2 border-red-600 ${
+      className={`bg-skin w-full h-full pb-20 ${
         darkMode ? "bg-white" : ""
       } transition-colors duration-300 ease-in-out flex flex-col items-center`}
     >

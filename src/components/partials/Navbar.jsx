@@ -7,8 +7,8 @@ import { Link, Element, animateScroll as scroll } from "react-scroll";
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Duration of the animation
-      once: false, // Whether animation should happen only once
+      duration: 1000,  
+      once: true, // Whether animation should happen only once
     });
   }, []);
   return (
@@ -125,7 +125,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               <img
                 src={Logo}
                 alt="logo"
-                className={`lg:hidden w-14 h-14  rounded-full flex flex-row-reverse drop-shadow-white ${
+                className={`lg:hidden w-14 h-14  rounded-full flex flex-row-reverse drop-shadow-white object-cover ${
                   darkMode ? "" : ""
                 }`}
               />

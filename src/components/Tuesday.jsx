@@ -1,4 +1,3 @@
-import AOS from "aos";
 import "aos/dist/aos.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,11 +6,17 @@ import {
   faBell,
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Tuesday = ({ darkMode }) => {
   const [isOpen4, setIsOpen4] = useState(false);
   const [dropOpen4, setDropOpen4] = useState(false);
+  const [isOpen5, setIsOpen5] = useState(false);
+  const [dropOpen5, setDropOpen5] = useState(false);
+  const [isOpen6, setIsOpen6] = useState(false);
+  const [dropOpen6, setDropOpen6] = useState(false);
+  const [isOpen7, setIsOpen7] = useState(false);
+  const [dropOpen7, setDropOpen7] = useState(false);
 
   const toggleOpen4 = () => {
     setIsOpen4(!isOpen4);
@@ -20,42 +25,31 @@ const Tuesday = ({ darkMode }) => {
   const toggleDropdown4 = () => {
     setDropOpen4(!dropOpen4);
   };
-  useEffect(() => {
-    AOS.init({
-      duration: 2000, // Adjust as necessary
-      once: false, // Whether animation should happen only once
-    });
-  }, []);
+  const toggleOpen5 = () => {
+    setIsOpen5(!isOpen5);
+    setDropOpen5(false);
+  };
+  const toggleDropdown5 = () => {
+    setDropOpen5(!dropOpen5);
+  };
+  const toggleOpen6 = () => {
+    setIsOpen6(!isOpen6);
+    setDropOpen6(false);
+  };
+  const toggleDropdown6 = () => {
+    setDropOpen6(!dropOpen6);
+  };
+  const toggleOpen7 = () => {
+    setIsOpen7(!isOpen7);
+    setDropOpen7(false);
+  };
+  const toggleDropdown7 = () => {
+    setDropOpen7(!dropOpen7);
+  };
 
   return (
     <div>
-      {/* <div className="schedule-sub-container">
-        <h1>Tuesday</h1>
-        
-        <div className="schedule-card">
-          <div className="sub-card">
-            <div className="subject">
-              <span>
-                CODE: <b>GE08</b>
-              </span>
-              <h3>Ethics</h3>
-              <span>T 03:00 PM - 04:30 PM</span>
-              <h3>ITC-208A</h3>
-            </div>
-            <div>
-              <img src="https://via.placeholder.com/150" alt="" />
-            </div>
-          </div>
-          <div className="prof">
-            <div>Class Professor</div>
-            <button className="prof-button">Open </button>
-          </div>
-        </div>
-      </div> */}
-      <div
-        className="border-2 border-green-600 font-sans lg:mx-20 "
-        data-aos="fade-up"
-      >
+      <div className="0 font-sans lg:mx-20 " data-aos="fade-up">
         <h1
           className={`text-center text-4xl font-bold  text-[#601008] ${
             darkMode ? "" : "text-[#bb4136]"
@@ -74,22 +68,25 @@ const Tuesday = ({ darkMode }) => {
             }`}
           >
             <div className="relative border-b-2 border-yellow-600  flex rounded-t-md bg-gradient-to-t from-blue-950 to-blue-600 p-4 w-full ">
-              <div className="subject">
+              <div className="lg:mt-4">
                 <span className="text-white">
                   CODE:
                   <b>
-                    <span className="italic bold"> ITP312</span>
+                    <span className="italic bold text-yellow-500 ">
+                      {" "}
+                      ITP312
+                    </span>
                   </b>
                 </span>
-                <h3 className="text-white text-lg font-bold   w-48">
+                <h3 className="text-white text-md font-bold   w-48">
                   Systems Integration and Architecture 1
                 </h3>
-                <span className="text-white font-semibold">
+                <span className="text-yellow-500  font-semibold">
                   T 07:30 AM - 09:30 AM
                 </span>
                 <h3 className="text-white font-bold italic"></h3>
               </div>
-              <div className="">
+              <div className="lg:w-36 lg:h-36">
                 <img
                   src="https://via.placeholder.com/150"
                   alt=""
@@ -101,12 +98,12 @@ const Tuesday = ({ darkMode }) => {
                   isOpen4 ? "h-full opacity-100" : "h-0 opacity-0"
                 } ${darkMode ? "text-white" : "bg-white "}`}
               >
-                <div className="flex flex-row items-center  space-x-28 border-b-2 border-yellow-600 ">
+                <div className="flex flex-row items-center  border-b-2 border-yellow-600 ">
                   <h2 className="ml-2 text-lg">
                     <FontAwesomeIcon icon={faBell} className="mx-2" />
-                    Remider/s
+                    Reminder/s
                   </h2>
-                  <div className="relative inline-block text-left ">
+                  <div className="relative inline-block text-left ml-20 lg:ml-32 ">
                     <button
                       onClick={toggleDropdown4}
                       className="px-4 py-1 m-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
@@ -122,8 +119,6 @@ const Tuesday = ({ darkMode }) => {
                           <li className="px-4 py-2 text-gray-700 hover:bg-gray-100">
                             TBA
                           </li>
-                          <li className="px-4 py-2 text-gray-700 hover:bg-gray-100"></li>
-                          <li className="px-4 py-2 text-gray-700 hover:bg-gray-100"></li>
                         </ul>
                       </div>
                     )}
@@ -136,14 +131,14 @@ const Tuesday = ({ darkMode }) => {
             </div>
 
             <div
-              className={`flex items-center space-x-9 lg:space-x-16 font-sans m-3 transition-colors duration-150 ease-in-out ${
+              className={`flex items-center  lg:space-x-16 font-sans m-3 transition-colors duration-150 ease-in-out ${
                 darkMode ? " text-skin" : "text-white "
               }`}
             >
               <div className="font-bold"> Figueroa, May Barcelona</div>
               <button
                 onClick={toggleOpen4}
-                className={`text-center prof-button font-bold border-2 p-2 rounded-md w-24 transition-colors duration-300 ease-in-out ${
+                className={`text-center prof-button font-bold border-2 py-2 ml-8 rounded-md w-24 transition-colors duration-300 ease-in-out ${
                   darkMode ? "border-skin" : "border-white"
                 }`}
               >
@@ -165,22 +160,25 @@ const Tuesday = ({ darkMode }) => {
             }`}
           >
             <div className="relative border-b-2 border-yellow-600  flex rounded-t-md bg-gradient-to-t from-blue-950 to-blue-600 p-4 w-full ">
-              <div className="subject">
+              <div className="lg:mt-4">
                 <span className="text-white">
                   CODE:
                   <b>
-                    <span className="italic bold"> ITP312L</span>
+                    <span className="italic bold text-yellow-500 ">
+                      {" "}
+                      ITP312L
+                    </span>
                   </b>
                 </span>
-                <h3 className="text-white text-lg font-bold   w-48">
-                  Systems Integration and Architecture 1 &nbsp; Lab
+                <h3 className="text-white text-md font-bold   w-48">
+                  Systems Integration and Architecture 1 Lab
                 </h3>
-                <span className="text-white font-semibold">
+                <span className="text-yellow-500  font-semibold">
                   T 09:30 AM - 12:30 PM
                 </span>
                 <h3 className="text-white font-bold italic"></h3>
               </div>
-              <div className="">
+              <div className="lg:w-36 lg:h-36">
                 <img
                   src="https://via.placeholder.com/150"
                   alt=""
@@ -189,32 +187,30 @@ const Tuesday = ({ darkMode }) => {
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${
-                  isOpen4 ? "h-full opacity-100" : "h-0 opacity-0"
+                  isOpen5 ? "h-full opacity-100" : "h-0 opacity-0"
                 } ${darkMode ? "text-white" : "bg-white "}`}
               >
-                <div className="flex flex-row items-center  space-x-28 border-b-2 border-yellow-600 ">
+                <div className="flex flex-row items-center border-b-2 border-yellow-600 ">
                   <h2 className="ml-2 text-lg">
                     <FontAwesomeIcon icon={faBell} className="mx-2" />
-                    Remider/s
+                    Reminder/s
                   </h2>
-                  <div className="relative inline-block text-left ">
+                  <div className="relative inline-block text-left ml-20 lg:ml-32">
                     <button
-                      onClick={toggleDropdown4}
+                      onClick={toggleDropdown5}
                       className="px-4 py-1 m-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
                     >
                       Files <FontAwesomeIcon icon={faCaretDown} />
                     </button>
-                    {dropOpen4 && (
+                    {dropOpen5 && (
                       <div
                         className="absolute right-0 mt-2 w-48 max-h-28 bg-white border border-gray-200 rounded-md shadow-lg transition-all duration-300 ease-in-out overflow-y-auto"
-                        onClick={() => setIsOpen4(false)}
+                        onClick={() => setIsOpen5(false)}
                       >
                         <ul className="list-none p-0 m-0">
                           <li className="px-4 py-2 text-gray-700 hover:bg-gray-100">
                             TBA
                           </li>
-                          <li className="px-4 py-2 text-gray-700 hover:bg-gray-100"></li>
-                          <li className="px-4 py-2 text-gray-700 hover:bg-gray-100"></li>
                         </ul>
                       </div>
                     )}
@@ -227,20 +223,20 @@ const Tuesday = ({ darkMode }) => {
             </div>
 
             <div
-              className={`flex items-center space-x-9 lg:space-x-16 font-sans m-3 transition-colors duration-150 ease-in-out ${
+              className={`flex items-center  lg:space-x-16 font-sans m-3 transition-colors duration-150 ease-in-out ${
                 darkMode ? " text-skin" : "text-white "
               }`}
             >
               <div className="font-bold"> Figueroa, May Barcelona</div>
               <button
-                onClick={toggleOpen4}
-                className={`text-center prof-button font-bold border-2 p-2 rounded-md w-24 transition-colors duration-300 ease-in-out ${
+                onClick={toggleOpen5}
+                className={`text-center prof-button font-bold border-2 py-2 ml-8 rounded-md w-24 transition-colors duration-300 ease-in-out ${
                   darkMode ? "border-skin" : "border-white"
                 }`}
               >
-                {isOpen4 ? "Close" : "Open "}
+                {isOpen5 ? "Close" : "Open "}
                 <FontAwesomeIcon
-                  icon={isOpen4 ? faCircleXmark : faArrowRightFromBracket}
+                  icon={isOpen5 ? faCircleXmark : faArrowRightFromBracket}
                   className="ml-2 font-light "
                 />
               </button>
@@ -256,22 +252,25 @@ const Tuesday = ({ darkMode }) => {
             }`}
           >
             <div className="relative border-b-2 border-yellow-600  flex rounded-t-md bg-gradient-to-t from-blue-950 to-blue-600 p-4 w-full ">
-              <div className="subject">
+              <div className="lg:mt-2">
                 <span className="text-white">
                   CODE:
                   <b>
-                    <span className="italic bold"> GE-ELEC14</span>
+                    <span className="italic bold text-yellow-500 ">
+                      {" "}
+                      GE-ELEC14
+                    </span>
                   </b>
                 </span>
-                <h3 className="text-white text-lg font-bold   w-48">
+                <h3 className="text-white text-lg  lg:text-md font-bold  w-48">
                   Technical Communication
                 </h3>
-                <span className="text-white font-semibold">
+                <span className="text-yellow-500 font-semibold">
                   T 01:30 PM - 03:00 PM
                 </span>
-                <h3 className="text-white font-bold italic">ITC-208B</h3>
+                <h3 className="font-bold italic text-red-700">ITC-208B</h3>
               </div>
-              <div className="">
+              <div className="lg:w-36 lg:h-36">
                 <img
                   src="https://via.placeholder.com/150"
                   alt=""
@@ -280,32 +279,30 @@ const Tuesday = ({ darkMode }) => {
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${
-                  isOpen4 ? "h-full opacity-100" : "h-0 opacity-0"
+                  isOpen6 ? "h-full opacity-100" : "h-0 opacity-0"
                 } ${darkMode ? "text-white" : "bg-white "}`}
               >
-                <div className="flex flex-row items-center  space-x-28 border-b-2 border-yellow-600 ">
+                <div className="flex flex-row items-center   border-b-2 border-yellow-600 ">
                   <h2 className="ml-2 text-lg">
                     <FontAwesomeIcon icon={faBell} className="mx-2" />
-                    Remider/s
+                    Reminder/s
                   </h2>
-                  <div className="relative inline-block text-left ">
+                  <div className="relative inline-block text-left ml-20 lg:ml-32">
                     <button
-                      onClick={toggleDropdown4}
+                      onClick={toggleDropdown6}
                       className="px-4 py-1 m-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
                     >
                       Files <FontAwesomeIcon icon={faCaretDown} />
                     </button>
-                    {dropOpen4 && (
+                    {dropOpen6 && (
                       <div
                         className="absolute right-0 mt-2 w-48 max-h-28 bg-white border border-gray-200 rounded-md shadow-lg transition-all duration-300 ease-in-out overflow-y-auto"
-                        onClick={() => setIsOpen4(false)}
+                        onClick={() => setIsOpen6(false)}
                       >
                         <ul className="list-none p-0 m-0">
                           <li className="px-4 py-2 text-gray-700 hover:bg-gray-100">
                             TBA
                           </li>
-                          <li className="px-4 py-2 text-gray-700 hover:bg-gray-100"></li>
-                          <li className="px-4 py-2 text-gray-700 hover:bg-gray-100"></li>
                         </ul>
                       </div>
                     )}
@@ -318,20 +315,20 @@ const Tuesday = ({ darkMode }) => {
             </div>
 
             <div
-              className={`flex items-center space-x-14 lg:space-x-20 font-sans m-3 transition-colors duration-150 ease-in-out ${
+              className={`flex items-center  lg:space-x-20 font-sans m-3 transition-colors duration-150 ease-in-out ${
                 darkMode ? " text-skin" : "text-white "
               }`}
             >
-              <div className="font-bold"> Ribaya, Emmie Tavora</div>
+              <div className="font-bold"> Ribaya, Emmie Tavora </div>
               <button
-                onClick={toggleOpen4}
-                className={`text-center prof-button font-bold border-2 p-2 rounded-md w-24 transition-colors duration-300 ease-in-out ${
+                onClick={toggleOpen6}
+                className={`text-center prof-button font-bold border-2 py-2 ml-10 rounded-md w-24 transition-colors duration-300 ease-in-out ${
                   darkMode ? "border-skin" : "border-white"
                 }`}
               >
-                {isOpen4 ? "Close" : "Open "}
+                {isOpen6 ? "Close" : "Open "}
                 <FontAwesomeIcon
-                  icon={isOpen4 ? faCircleXmark : faArrowRightFromBracket}
+                  icon={isOpen6 ? faCircleXmark : faArrowRightFromBracket}
                   className="ml-2 font-light "
                 />
               </button>
@@ -347,20 +344,20 @@ const Tuesday = ({ darkMode }) => {
             }`}
           >
             <div className="relative border-b-2 border-yellow-600  flex rounded-t-md bg-gradient-to-t from-blue-950 to-blue-600 p-4 w-full ">
-              <div className="subject">
+              <div className="lg:mt-6 mt-2">
                 <span className="text-white">
                   CODE:
                   <b>
-                    <span className="italic bold"> GE08</span>
+                    <span className="italic bold text-yellow-500 "> GE08</span>
                   </b>
                 </span>
-                <h3 className="text-white text-lg font-bold   w-48">Ethics</h3>
-                <span className="text-white font-semibold">
+                <h3 className="text-white text-md font-bold   w-48">Ethics</h3>
+                <span className="text-yellow-500  font-semibold">
                   T 03:00 PM - 04:30 PM
                 </span>
-                <h3 className="text-white font-bold italic">ITC-208A</h3>
+                <h3 className="text-red-700 font-bold italic">ITC-208A</h3>
               </div>
-              <div className="">
+              <div className="lg:w-36 lg:h-36">
                 <img
                   src="https://via.placeholder.com/150"
                   alt=""
@@ -369,32 +366,30 @@ const Tuesday = ({ darkMode }) => {
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${
-                  isOpen4 ? "h-full opacity-100" : "h-0 opacity-0"
+                  isOpen7 ? "h-full opacity-100" : "h-0 opacity-0"
                 } ${darkMode ? "text-white" : "bg-white "}`}
               >
-                <div className="flex flex-row items-center  space-x-28 border-b-2 border-yellow-600 ">
+                <div className="flex flex-row items-center  border-b-2 border-yellow-600 ">
                   <h2 className="ml-2 text-lg">
                     <FontAwesomeIcon icon={faBell} className="mx-2" />
-                    Remider/s
+                    Reminder/s
                   </h2>
-                  <div className="relative inline-block text-left ">
+                  <div className="relative inline-block text-left ml-20 lg:ml-32">
                     <button
-                      onClick={toggleDropdown4}
+                      onClick={toggleDropdown7}
                       className="px-4 py-1 m-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
                     >
                       Files <FontAwesomeIcon icon={faCaretDown} />
                     </button>
-                    {dropOpen4 && (
+                    {dropOpen7 && (
                       <div
                         className="absolute right-0 mt-2 w-48 max-h-28 bg-white border border-gray-200 rounded-md shadow-lg transition-all duration-300 ease-in-out overflow-y-auto"
-                        onClick={() => setIsOpen4(false)}
+                        onClick={() => setIsOpen7(false)}
                       >
                         <ul className="list-none p-0 m-0">
                           <li className="px-4 py-2 text-gray-700 hover:bg-gray-100">
                             TBA
                           </li>
-                          <li className="px-4 py-2 text-gray-700 hover:bg-gray-100"></li>
-                          <li className="px-4 py-2 text-gray-700 hover:bg-gray-100"></li>
                         </ul>
                       </div>
                     )}
@@ -407,20 +402,20 @@ const Tuesday = ({ darkMode }) => {
             </div>
 
             <div
-              className={`flex items-center space-x-4 lg:space-x-8 font-sans m-3 transition-colors duration-150 ease-in-out ${
+              className={`flex items-center lg:space-x-8 font-sans m-3 transition-colors duration-150 ease-in-out ${
                 darkMode ? " text-skin" : "text-white "
               }`}
             >
               <div className="font-bold"> Alim, John Benedich De Velez</div>
               <button
-                onClick={toggleOpen4}
-                className={`text-center prof-button font-bold border-2 p-2 rounded-md w-24 transition-colors duration-300 ease-in-out ${
+                onClick={toggleOpen7}
+                className={`text-center prof-button font-bold border-2 py-2 ml-6 rounded-md w-24 transition-colors duration-300 ease-in-out ${
                   darkMode ? "border-skin" : "border-white"
                 }`}
               >
-                {isOpen4 ? "Close" : "Open "}
+                {isOpen7 ? "Close" : "Open "}
                 <FontAwesomeIcon
-                  icon={isOpen4 ? faCircleXmark : faArrowRightFromBracket}
+                  icon={isOpen7 ? faCircleXmark : faArrowRightFromBracket}
                   className="ml-2 font-light "
                 />
               </button>
