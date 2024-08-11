@@ -1,67 +1,77 @@
-import Logo from "./assets/LOGO.png";
-import React, { useEffect } from "react";
+import Logo from "./assets/LOGO.svg";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link, Element, animateScroll as scroll } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBars,
+  faX,
+  faHouse,
+  faUserGroup,
+  faCalendarDays,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
   useEffect(() => {
     AOS.init({
-      duration: 1000,  
-      once: true, // Whether animation should happen only once
+      duration: 1000,
+      once: true,
     });
   }, []);
   return (
     <div className="sticky top-0 w-full select-none z-50 ">
+      <div className=""></div>
       <div
         className={`navbar  bg-skin text-stone-300 font-medium shadow-lg py-1 font-sans ${
           darkMode ? " bg-white lg:text-skin" : " "
         } transition-colors duration-300 ease-in-out filter-none `}
       >
+        {/* Navbar Menu */}
         <div
           className="navbar-start ml-[-5px] filter-none "
           data-aos="fade-down"
         >
-          <div className="dropdown filter-none ">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-10"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+          <div className=" filter-none  relative mx-8 lg:m-0">
+            <button onClick={toggleOpen} className="lg:hidden ">
+              <div
+                className={`absolute inset-0 flex items-center justify-center transition-all duration-300 transform ${
+                  isOpen
+                    ? "rotate-45 opacity-0 scale-0"
+                    : "rotate-0 opacity-100 scale-100"
+                }`}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
+                <FontAwesomeIcon
+                  icon={faBars}
+                  className={`m-2 w-10 h-10 text-[#601008]  ${
+                    darkMode ? "" : "text-white"
+                  }`}
                 />
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white filter-none"
-            >
-              <li>
-                <Link to="home" smooth={true} duration={500} offset={-70}>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="officers" smooth={true} duration={500} offset={-70}>
-                  Officers
-                </Link>
-              </li>
-              <li>
-                <Link to="schedule" smooth={true} duration={500} offset={-70}>
-                  Schedule
-                </Link>
-              </li>
-            </ul>
+              </div>
+              <div
+                className={`absolute inset-0 flex items-center justify-center transition-all duration-300 transform ${
+                  isOpen
+                    ? "rotate-0 opacity-100 scale-100"
+                    : "-rotate-45 opacity-0 scale-0"
+                }`}
+              >
+                <FontAwesomeIcon
+                  icon={faX}
+                  className={`m-2 w-8 h-8  text-[#601008] ${
+                    darkMode ? "" : "text-white"
+                  }`}
+                />
+              </div>
+            </button>
           </div>
           <Link
-            className="btn btn-ghost text-yellow-500 text-xl font-bold ml-[-20px] lg:ml-2"
+            className="btn btn-ghost text-yellow-500 text-xl font-bold lg:ml-2"
             to="home"
             smooth={true}
             duration={500}
@@ -70,6 +80,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             ICS-501A
           </Link>
         </div>
+
         <div
           className="navbar-end hidden lg:flex filter-none "
           data-aos="fade-down"
@@ -132,6 +143,51 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </Link>
           </div>
         </div>
+      </div>
+      <div
+        // Navbar slide-show
+        className={`absolute rounded-r-md bg-skin opacity-90  w-40 h-52  overflow-hidden transition-all duration-300 ease-left-to-right  ${
+          isOpen ? "translate-x-0 opacity-100 " : "-translate-x-full opacity-0 "
+        } ${darkMode ? "text-white" : "text-skin bg-white"}`}
+      >
+        <ul className="border-b-2 border-yellow-600 pb-6">
+          <li className="mt-6 mx-4">
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsOpen(false)}
+            >
+              <FontAwesomeIcon icon={faHouse} className="w-5 h-5 mr-2" />
+              Home
+            </Link>
+          </li>
+          <li className="mt-6 mx-4">
+            <Link
+              to="officers"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsOpen(false)}
+            >
+              <FontAwesomeIcon icon={faUserGroup} className="w-5 h-5 mr-2" />
+              Officers
+            </Link>
+          </li>
+          <li className="mt-6 mx-4">
+            <Link
+              to="schedule"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onClick={() => setIsOpen(false)}
+            >
+              <FontAwesomeIcon icon={faCalendarDays} className="w-5 h-5 mr-2" />
+              Schedule
+            </Link>
+          </li>
+        </ul>
       </div>
     </div>
   );

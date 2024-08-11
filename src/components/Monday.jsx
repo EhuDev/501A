@@ -98,10 +98,7 @@ const Monday = ({ darkMode }) => {
                       Files <FontAwesomeIcon icon={faCaretDown} />
                     </button>
                     {dropOpen && (
-                      <div
-                        className="absolute right-0 mt-2 w-48 max-h-28 bg-white border border-gray-200 rounded-md shadow-lg transition-all duration-300 ease-in-out overflow-y-auto"
-                        onClick={() => setIsOpen(false)}
-                      >
+                      <div className="absolute right-0 mt-2 w-48 max-h-28 bg-white border border-gray-200 rounded-md shadow-lg transition-all duration-300 ease-in-out overflow-y-auto">
                         <ul className="list-none p-0 m-0">
                           <li className="px-4 py-2 text-gray-700 hover:bg-gray-100">
                             TBA

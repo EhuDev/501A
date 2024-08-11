@@ -1,8 +1,8 @@
 import Schedule from "./Schedule";
-import centerLogo from "../assets/RTU-Logo-center.png";
-import frameLogo from "../assets/RTU-Logo-Frame.png";
-import iscframe from "../assets/ICS-Logo-frame.png";
-import isccenter from "../assets//ICS-Logo-center.png";
+import centerLogo from "../assets/RTU-Logo-center.webp";
+import frameLogo from "../assets/RTU-Logo-Frame.webp";
+import iscframe from "../assets/ICS-Logo-frame.webp";
+import isccenter from "../assets/ICS-Logo-center.webp";
 import "aos/dist/aos.css";
 
 const HomePage = ({ darkMode }) => {

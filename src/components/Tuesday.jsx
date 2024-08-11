@@ -84,7 +84,7 @@ const Tuesday = ({ darkMode }) => {
                 <span className="text-yellow-500  font-semibold">
                   T 07:30 AM - 09:30 AM
                 </span>
-                <h3 className="text-white font-bold italic"></h3>
+                <h3 className="text-red-700 font-bold italic">ITC-111</h3>
               </div>
               <div className="lg:w-36 lg:h-36">
                 <img
@@ -176,7 +176,7 @@ const Tuesday = ({ darkMode }) => {
                 <span className="text-yellow-500  font-semibold">
                   T 09:30 AM - 12:30 PM
                 </span>
-                <h3 className="text-white font-bold italic"></h3>
+                <h3 className="text-red-700 font-bold italic">ITC-111</h3>
               </div>
               <div className="lg:w-36 lg:h-36">
                 <img
