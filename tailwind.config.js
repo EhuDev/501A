@@ -26,6 +26,9 @@ export default {
         "yellow-lg": "0 10px 8px rgba(255, 255, 0, 0.7)",
         "white-md": "0 4px 4px rgba(255, 255, 255, 1)",
         "white-lg": "0 0 20px rgba(255, 255, 255, 1)",
+        "red-lg": "0 4px 6px rgba(255, 0, 0, 0.5)",
+        "red-md": "0 2px 4px rgba(255, 0, 0, 0.5)",
+        "red-sm": "0 1px 2px rgba(255, 0, 0, 0.5)",
       },
       keyframes: {
         spin: {

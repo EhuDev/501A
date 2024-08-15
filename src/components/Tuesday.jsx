@@ -7,6 +7,7 @@ import {
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import Profile from "./partials/Profile";
 
 const Tuesday = ({ darkMode }) => {
   const [isOpen4, setIsOpen4] = useState(false);
@@ -17,6 +18,8 @@ const Tuesday = ({ darkMode }) => {
   const [dropOpen6, setDropOpen6] = useState(false);
   const [isOpen7, setIsOpen7] = useState(false);
   const [dropOpen7, setDropOpen7] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [dropOpen2, setDropOpen2] = useState(false);
 
   const toggleOpen4 = () => {
     setIsOpen4(!isOpen4);
@@ -46,10 +49,17 @@ const Tuesday = ({ darkMode }) => {
   const toggleDropdown7 = () => {
     setDropOpen7(!dropOpen7);
   };
+  const toggleOpen2 = () => {
+    setIsOpen2(!isOpen2);
+    setDropOpen2(false);
+  };
+  const toggleDropdown2 = () => {
+    setDropOpen2(!dropOpen2);
+  };
 
   return (
     <div>
-      <div className="0 font-sans lg:mx-20 " data-aos="fade-up">
+      <div className=" font-sans lg:mx-20 " data-aos="fade-up">
         <h1
           className={`text-center text-4xl font-bold  text-[#601008] ${
             darkMode ? "" : "text-[#bb4136]"
@@ -87,11 +97,7 @@ const Tuesday = ({ darkMode }) => {
                 <h3 className="text-red-700 font-bold italic">ITC-111</h3>
               </div>
               <div className="lg:w-36 lg:h-36">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt=""
-                  className="rounded-full "
-                />
+                <Profile />
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${
@@ -179,11 +185,7 @@ const Tuesday = ({ darkMode }) => {
                 <h3 className="text-red-700 font-bold italic">ITC-111</h3>
               </div>
               <div className="lg:w-36 lg:h-36">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt=""
-                  className="rounded-full "
-                />
+                <Profile />
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${
@@ -271,11 +273,7 @@ const Tuesday = ({ darkMode }) => {
                 <h3 className="font-bold italic text-red-700">ITC-208B</h3>
               </div>
               <div className="lg:w-36 lg:h-36">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt=""
-                  className="rounded-full "
-                />
+                <Profile />
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${
@@ -358,11 +356,7 @@ const Tuesday = ({ darkMode }) => {
                 <h3 className="text-red-700 font-bold italic">ITC-208A</h3>
               </div>
               <div className="lg:w-36 lg:h-36">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt=""
-                  className="rounded-full "
-                />
+                <Profile />
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${
@@ -416,6 +410,93 @@ const Tuesday = ({ darkMode }) => {
                 {isOpen7 ? "Close" : "Open "}
                 <FontAwesomeIcon
                   icon={isOpen7 ? faCircleXmark : faArrowRightFromBracket}
+                  className="ml-2 font-light "
+                />
+              </button>
+            </div>
+          </div>
+          {/* Monday Fifth Subject */}
+          <div
+            className={`filter-none rounded-lg shadow-lg m-4 inline-block ${
+              darkMode
+                ? "bg-white "
+                : "shadow-lg bg-gradient-to-t from-skin to-slate-600"
+            }`}
+          >
+            <div className="relative border-b-2 border-yellow-600  flex rounded-t-md bg-gradient-to-t from-blue-950 to-blue-600 p-4 w-full ">
+              <div className="lg:mt-6 mt-2">
+                <span className="text-white">
+                  CODE:
+                  <b>
+                    <span className="italic bold text-yellow-500">
+                      {" "}
+                      ITP310L
+                    </span>
+                  </b>
+                </span>
+                <h3 className="text-white text-lg font-bold w-48 ">
+                  Networking Lab
+                </h3>
+                <span className=" font-semibold text-yellow-500">
+                  T 05:00 PM - 06:30 PM
+                </span>
+                <h3 className="text-white font-bold italic"></h3>
+              </div>
+              <div className="lg:w-36 lg:h-36">
+                <Profile />
+              </div>
+              <div
+                className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${
+                  isOpen2 ? "h-full opacity-100" : "h-0 opacity-0"
+                } ${darkMode ? "text-white" : "bg-white "}`}
+              >
+                <div className="flex flex-row items-center  border-b-2 border-yellow-600 ">
+                  <h2 className="ml-2 text-lg">
+                    <FontAwesomeIcon icon={faBell} className="mx-2" />
+                    Reminder/s
+                  </h2>
+                  <div className="relative inline-block text-left ml-20 lg:ml-32">
+                    <button
+                      onClick={toggleDropdown2}
+                      className="px-4 py-1 m-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+                    >
+                      Files <FontAwesomeIcon icon={faCaretDown} />
+                    </button>
+                    {dropOpen2 && (
+                      <div
+                        className="absolute right-0 mt-2 w-48 max-h-28 bg-white border border-gray-200 rounded-md shadow-lg transition-all duration-300 ease-in-out overflow-y-auto"
+                        onClick={() => setIsOpen2(false)}
+                      >
+                        <ul className="list-none p-0 m-0">
+                          <li className="px-4 py-2 text-gray-700 hover:bg-gray-100">
+                            TBA
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <ul className="m-2 mx-4 max-h-32 overflow-y-auto  ">
+                  <li>TBA</li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              className={`flex items-center  lg:space-x-16 m-3 transition-colors duration-150 ease-in-out ${
+                darkMode ? " text-skin" : "text-white "
+              }`}
+            >
+              <div className="font-bold"> Cezar, Alquin Dumal-Is</div>
+              <button
+                onClick={toggleOpen2}
+                className={`text-center prof-button font-bold border-2 py-2 ml-8 rounded-md w-24 transition-colors duration-300 ease-in-out ${
+                  darkMode ? "border-skin" : "border-white"
+                }`}
+              >
+                {isOpen2 ? "Close" : "Open "}
+                <FontAwesomeIcon
+                  icon={isOpen2 ? faCircleXmark : faArrowRightFromBracket}
                   className="ml-2 font-light "
                 />
               </button>

@@ -4,6 +4,7 @@ import Monday from "./Monday";
 import Saturday from "./Saturday";
 import Thursday from "./Thursday";
 import Tuesday from "./Tuesday";
+import Wednesday from "./Wednesday";
 
 const Schedule = ({ darkMode }) => {
   return (
@@ -22,6 +23,7 @@ const Schedule = ({ darkMode }) => {
         <div className="schedule-container">
           <Monday darkMode={darkMode} />
           <Tuesday darkMode={darkMode} />
+          <Wednesday darkMode={darkMode} />
           <Thursday darkMode={darkMode} />
           <Friday darkMode={darkMode} />
           <Saturday darkMode={darkMode} />

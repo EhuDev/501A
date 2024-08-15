@@ -4,6 +4,7 @@ import frameLogo from "../assets/RTU-Logo-Frame.webp";
 import iscframe from "../assets/ICS-Logo-frame.webp";
 import isccenter from "../assets/ICS-Logo-center.webp";
 import "aos/dist/aos.css";
+import Officers from "./Officers";
 
 const HomePage = ({ darkMode }) => {
   //
@@ -71,8 +72,8 @@ const HomePage = ({ darkMode }) => {
                 STUDENTS OF
               </h1>
               <div className=" ">
-                <h1 className="text-4xl lg:text-8xl  text-center font-extrabold italic  text-yellow-500 ">
-                  ICS-501A
+                <h1 className="text-3xl lg:text-7xl mb-1 lg:mb-2 text-center font-extrabold italic  text-yellow-500 ">
+                  CEIT-37-501A
                 </h1>
               </div>
               <div className="text-center ">
@@ -102,7 +103,9 @@ const HomePage = ({ darkMode }) => {
           </div>
         </div>
 
-        <section name="officers"></section>
+        <section name="officers">
+          <Officers darkMode={darkMode} />
+        </section>
         <section name="schedule" className="">
           <Schedule darkMode={darkMode} />
         </section>

@@ -7,6 +7,7 @@ import {
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import Profile from "./partials/Profile";
 
 const Saturday = ({ darkMode }) => {
   const [isOpen12, setIsOpen12] = useState(false);
@@ -68,11 +69,7 @@ const Saturday = ({ darkMode }) => {
                 <h3 className="text-white font-bold italic"></h3>
               </div>
               <div className="lg:w-36 lg:h-36">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt=""
-                  className="rounded-full "
-                />
+                <Profile />
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${
@@ -162,11 +159,7 @@ const Saturday = ({ darkMode }) => {
                 <h3 className="text-red-700 font-bold italic">ITC-111</h3>
               </div>
               <div className="lg:w-36 lg:h-36">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt=""
-                  className="rounded-full "
-                />
+                <Profile />
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${

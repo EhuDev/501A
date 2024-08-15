@@ -7,6 +7,7 @@ import {
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import Profile from "./partials/Profile";
 
 const Friday = ({ darkMode }) => {
   const [isOpen9, setIsOpen9] = useState(false);
@@ -76,12 +77,10 @@ const Friday = ({ darkMode }) => {
                 </span>
                 <h3 className="font-bold italic text-red-700">ITC-208B</h3>
               </div>
+
+              {/* Card-Profile */}
               <div className="lg:w-36 lg:h-36">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt=""
-                  className="rounded-full "
-                />
+                <Profile />
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${
@@ -164,11 +163,7 @@ const Friday = ({ darkMode }) => {
                 <h3 className="text-red-700 font-bold italic">ITC-208A</h3>
               </div>
               <div className="lg:w-36 lg:h-36">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt=""
-                  className="rounded-full "
-                />
+                <Profile />
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${
@@ -251,16 +246,12 @@ const Friday = ({ darkMode }) => {
                   Networking Lab
                 </h3>
                 <span className=" font-semibold text-yellow-500">
-                  F 05:30 PM - 08:30 PM
+                  F 05:00 PM - 06:30 PM
                 </span>
                 <h3 className="text-white font-bold italic"></h3>
               </div>
               <div className="lg:w-36 lg:h-36">
-                <img
-                  src="https://via.placeholder.com/150"
-                  alt=""
-                  className="rounded-full "
-                />
+                <Profile />
               </div>
               <div
                 className={`bg-skin text-skin absolute w-full ml-[-16px]  mt-[-16px] rounded-t-md overflow-hidden transition-all duration-500 ease-slow-down ${

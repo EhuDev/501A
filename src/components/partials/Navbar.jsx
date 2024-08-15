@@ -71,13 +71,13 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </button>
           </div>
           <Link
-            className="btn btn-ghost text-yellow-500 text-xl font-bold lg:ml-2"
+            className="btn btn-ghost text-yellow-500 text-xl ml-[-14px]  font-bold lg:ml-2"
             to="home"
             smooth={true}
             duration={500}
             offset={-70}
           >
-            ICS-501A
+            CEIT-37-501A
           </Link>
         </div>
 
