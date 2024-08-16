@@ -1,5 +1,6 @@
 import ClassRep from "./ClassRep";
 import Secretary from "./Secretary";
+import { Link } from "react-router-dom";
 
 const Officers = ({ darkMode }) => {
   return (
@@ -17,6 +18,15 @@ const Officers = ({ darkMode }) => {
       <div className="lg:flex lg:space-x-6">
         <ClassRep darkMode={darkMode} />
         <Secretary darkMode={darkMode} />
+      </div>
+      <div
+        className={`text-center font-heading mt-6  ${
+          darkMode ? "text-skin" : "text-white"
+        }`}
+      >
+        <Link to="/classlist" data-aos="fade-up">
+          VIEW CLASS-LIST
+        </Link>
       </div>
     </div>
   );

@@ -33,9 +33,9 @@ const Secretary = ({ darkMode }) => {
               isClicked ? "" : "scale-x-[-1] opacity-0"
             }`}
           >
-            <img src={bini} alt="bini" className="w-full " />
-            <p className="text-white">x</p>
-            <p className="text-center text-white text-xl mb-10 font-heading">
+            {/* <img src={bini} alt="bini" className="w-full " />
+            <p className="text-white">x</p> */}
+            <p className="text-center text-white text-xl  font-heading">
               MICA GADISTA
             </p>
           </div>

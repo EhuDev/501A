@@ -7,8 +7,6 @@ import "aos/dist/aos.css";
 import Officers from "./Officers";
 
 const HomePage = ({ darkMode }) => {
-  //
-
   return (
     <>
       <div name="home" className="h-full ">
